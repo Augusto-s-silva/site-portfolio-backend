@@ -27,6 +27,11 @@ app.get('/', (req, res) => {
     res.send("API do portfólio está funcionando");
 });
 
+//manter ligado online
+app.get('/health', (req, res) => {
+    res.status(200).send('OK');
+});
+
 //Servidor
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
